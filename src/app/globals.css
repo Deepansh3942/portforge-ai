@@ -121,3 +121,34 @@ body {
     background-size: 40px 40px;
   }
 }
+
+@layer utilities {
+  .glass {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .glass-strong {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .neon-border {
+    box-shadow:
+      0 0 20px rgba(0,180,255,0.15),
+      inset 0 0 20px rgba(0,180,255,0.05);
+  }
+
+  .text-gradient {
+    background: linear-gradient(
+      to right,
+      #38bdf8,
+      #818cf8
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
