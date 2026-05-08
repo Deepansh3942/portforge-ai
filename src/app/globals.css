@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+:root {
+  --background: 222 35% 4%;
+  --foreground: 210 40% 98%;
+
+  --card: 222 30% 7%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 222 30% 7%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 195 100% 60%;
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 222 20% 12%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 222 18% 14%;
+  --muted-foreground: 215 20% 70%;
+
+  --accent: 195 100% 60%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 62% 40%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 195 100% 22%;
+  --input: 222 20% 12%;
+  --ring: 195 100% 60%;
+
+  --radius: 1rem;
+}
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(0, 153, 255, 0.08),
+      transparent 35%
+    ),
+    linear-gradient(
+      to bottom,
+      #050816,
+      #070b1a
+    );
+
+  color: hsl(var(--foreground));
+
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255,255,255,0.03);
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(0,180,255,0.15);
+  }
+
+  .glass-strong {
+    background: rgba(255,255,255,0.05);
+
+    backdrop-filter: blur(24px);
+
+    border: 1px solid rgba(0,180,255,0.22);
+  }
+
+  .neon-border {
+    border: 1px solid rgba(0,180,255,0.22);
+
+    box-shadow:
+      0 0 0.5px rgba(0,180,255,0.9),
+      0 0 12px rgba(0,180,255,0.12);
+  }
+
+  .neon-hover {
+    transition: all 0.3s ease;
+  }
+
+  .neon-hover:hover {
+    border-color: rgba(56,189,248,0.7);
+
+    box-shadow:
+      0 0 18px rgba(56,189,248,0.18);
+  }
+
+  .text-gradient {
+    background: linear-gradient(
+      to right,
+      #38bdf8,
+      #60a5fa,
+      #818cf8
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(
+        rgba(255,255,255,0.03) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255,255,255,0.03) 1px,
+        transparent 1px
+      );
+
+    background-size: 40px 40px;
+  }
+}
