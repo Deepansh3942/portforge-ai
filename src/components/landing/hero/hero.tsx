@@ -4,10 +4,12 @@ import DashboardPreview from "../dashboard-preview/dashboard-preview";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center pt-32">
-      <div className="grid w-full items-center gap-16 lg:grid-cols-2">
+    <section className="relative flex min-h-[100dvh] items-center py-16 lg:py-20">
+      <div className="pointer-events-none absolute inset-0 grid-bg opacity-[0.35]" />
+      <div className="pointer-events-none absolute left-1/2 top-[-220px] h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div className="grid w-full items-start gap-10 lg:grid-cols-2 lg:gap-12">
         {/* LEFT */}
-        <div className="space-y-8">
+        <div className="space-y-6">
           <div
             className="
               inline-flex
@@ -26,15 +28,16 @@ export default function Hero() {
             AI-POWERED CAREER INTELLIGENCE
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             <h1
               className="
                 max-w-3xl
-                text-5xl
+                text-4xl
                 font-black
-                leading-tight
+                leading-[1.05]
                 tracking-tight
-                md:text-7xl
+                sm:text-5xl
+                lg:text-6xl
               "
             >
               Optimize. Build.
@@ -46,9 +49,10 @@ export default function Hero() {
             <p
               className="
                 max-w-xl
-                text-lg
+                text-base
                 leading-relaxed
                 text-white/60
+                sm:text-lg
               "
             >
               PortForge AI analyzes your resume, enhances your skills, and builds
@@ -59,15 +63,21 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4">
             <Button
               className="
-                h-14
+                h-11
                 rounded-xl
                 border
-                border-cyan-400/30
+                border-cyan-400/20
                 bg-cyan-500/15
-                px-8
-                text-base
-                text-cyan-200
+                px-6
+                text-sm
+                text-cyan-100
+
+                shadow-[0_0_25px_rgba(0,140,255,0.18)]
+
+                transition-all
+
                 hover:bg-cyan-500/25
+                hover:shadow-[0_0_40px_rgba(0,140,255,0.28)]
               "
             >
               Upload Your Resume
@@ -76,12 +86,12 @@ export default function Hero() {
             <Button
               variant="outline"
               className="
-                h-14
+                h-11
                 rounded-xl
                 border-cyan-400/20
                 bg-transparent
-                px-8
-                text-base
+                px-6
+                text-sm
                 text-white/80
                 hover:bg-white/5
               "
@@ -90,7 +100,7 @@ export default function Hero() {
             </Button>
           </div>
 
-          <div className="flex flex-wrap gap-8 pt-4 text-sm text-white/50">
+          <div className="flex flex-wrap gap-6 pt-2 text-xs text-white/50 sm:text-sm">
             <div>✦ AI-Powered</div>
             <div>✦ ATS Optimized</div>
             <div>✦ Career Focused</div>
