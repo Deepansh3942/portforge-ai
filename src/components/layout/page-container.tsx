@@ -4,7 +4,7 @@ type Props = {
 
 export default function PageContainer({ children }: Props) {
   return (
-    <main className="mx-auto max-w-7xl px-6 lg:px-8">
+    <main className="mx-auto max-w-7xl px-6 pt-40 lg:px-8">
       {children}
     </main>
   );

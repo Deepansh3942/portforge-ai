@@ -4,7 +4,7 @@ import DashboardPreview from "../dashboard-preview/dashboard-preview";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[100dvh] items-center py-16 lg:py-20">
+    <section className="relative flex items-start pb-12 pt-0 lg:pb-16">
       <div className="pointer-events-none absolute inset-0 grid-bg opacity-[0.35]" />
       <div className="pointer-events-none absolute left-1/2 top-[-220px] h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-3xl" />
       <div className="grid w-full items-start gap-10 lg:grid-cols-2 lg:gap-12">

@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 import BackgroundEffects from "@/components/layout/background-effects";
+import Navbar from "@/components/layout/navbar";
 
 export const metadata: Metadata = {
   title: "PortForge AI",
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <BackgroundEffects />
+        <Navbar />
         {children}
       </body>
     </html>

@@ -1,69 +1,143 @@
-import SectionContainer from "@/components/layout/section-container";
-
-const FEATURES = [
+const features = [
   {
-    title: "Job application tracking",
+    title: "AI Resume Analysis",
     description:
-      "Capture every application with status, notes, links, and next actions—organized and searchable.",
+      "Deep resume intelligence powered by AI-driven evaluation.",
   },
   {
-    title: "Resume management",
+    title: "ATS Optimization",
     description:
-      "Keep multiple resume versions, tailor them to roles, and track what you submitted for each job.",
+      "Improve ATS compatibility and keyword matching.",
   },
   {
-    title: "Interview readiness",
+    title: "Portfolio Builder",
     description:
-      "Schedule interviews, store prep notes, and generate targeted questions based on the job description.",
+      "Generate futuristic developer portfolios instantly.",
   },
   {
-    title: "Dashboard analytics",
+    title: "Skill Gap Detection",
     description:
-      "See your funnel at a glance—applications, callbacks, interviews, offers—plus trends over time.",
+      "Identify missing skills for target job roles.",
   },
   {
-    title: "AI resume analysis",
+    title: "Job Match Intelligence",
     description:
-      "Get scoring, keyword gaps, and actionable edits so your resume matches the role intent.",
+      "AI-powered job compatibility analysis.",
   },
   {
-    title: "Career insights",
+    title: "Career Recommendations",
     description:
-      "Identify skill gaps and plan your next steps with AI-driven recommendations.",
+      "Personalized suggestions to improve career growth.",
   },
 ];
 
 export default function Features() {
   return (
-    <SectionContainer className="relative" >
-      <div id="features" className="mx-auto max-w-6xl scroll-mt-24">
-        <div className="max-w-2xl">
-          <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Everything you need to run your job search
-          </h2>
-          <p className="mt-3 text-base leading-relaxed text-white/70">
-            A single workspace to track progress, stay organized, and get smarter
-            recommendations as you go.
-          </p>
+    <section className="pt-16 pb-24 md:pt-20 md:pb-28">
+      <div className="mb-16 space-y-4 text-center">
+        <div
+          className="
+            inline-flex
+            rounded-full
+            border
+            border-cyan-400/10
+            bg-cyan-500/5
+            px-4
+            py-2
+            text-xs
+            tracking-wide
+            text-cyan-300
+          "
+        >
+          POWERFUL AI FEATURES
         </div>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURES.map((feature) => (
+        <h2 className="text-5xl font-bold tracking-tight">
+          Everything You Need
+          <br />
+
+          <span className="text-gradient">
+            To Advance Your Career
+          </span>
+        </h2>
+      </div>
+
+      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {features.map((feature) => (
+          <div
+            key={feature.title}
+            className="
+              glass
+              neon-border
+              group
+              relative
+              overflow-hidden
+              rounded-3xl
+              p-8
+              transition-all
+              duration-300
+              hover:-translate-y-2
+            "
+          >
+            {/* Glow */}
             <div
-              key={feature.title}
-              className="glass neon-hover rounded-3xl p-6"
+              className="
+                absolute
+                inset-0
+                opacity-0
+                transition-opacity
+                duration-300
+                group-hover:opacity-100
+              "
             >
-              <div className="text-base font-semibold text-white">
+              <div
+                className="
+                  absolute
+                  left-1/2
+                  top-1/2
+                  h-40
+                  w-40
+                  -translate-x-1/2
+                  -translate-y-1/2
+                  rounded-full
+                  bg-cyan-500/10
+                  blur-3xl
+                "
+              />
+            </div>
+
+            {/* Icon */}
+            <div
+              className="
+                mb-6
+                flex
+                h-14
+                w-14
+                items-center
+                justify-center
+                rounded-2xl
+                border
+                border-cyan-400/20
+                bg-cyan-500/5
+                text-cyan-300
+              "
+            >
+              ✦
+            </div>
+
+            {/* Content */}
+            <div className="space-y-4">
+              <h3 className="text-2xl font-semibold">
                 {feature.title}
-              </div>
-              <p className="mt-2 text-sm leading-relaxed text-white/70">
+              </h3>
+
+              <p className="leading-relaxed text-white/55">
                 {feature.description}
               </p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </SectionContainer>
+    </section>
   );
 }
-
